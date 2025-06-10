@@ -1,0 +1,19 @@
+Endpoints (as designed previously):
+POST /api/translate-query
+POST /api/search-articles (mock for now, or real if you implement it)
+POST /api/summarize-articles (or break into individual and overall summary endpoints)
+POST /api/generate-overall-summary
+POST /api/generate-facts-for-kids
+POST /api/generate-article-relations
+Headers: Each request should include X-Gemini-API-Key: <your_api_key>.
+Backend Logic:
+Extract the API key from the header.
+Dynamically initialize the Genkit googleAI plugin or use the Gemini model directly with this key for each AI operation.
+Reuse prompt templates and Zod schemas from your original Next.js app's flows.
+Example (conceptual for a backend function):
+// import { googleAI } from '@genkit-ai/googleai';
+// const apiKey = request.headers.get('X-Gemini-API-Key');
+// const dynamicGoogleAI = googleAI({ apiKey });
+// const model = dynamicGoogleAI.model('gemini-2.0-flash'); // or gemini-pro
+// const response = await model.generate({ prompt: "...", output: { format: 'json', schema: ... } });
+This should give you all the client-side code and a clear plan for the backend. Remember to replace placeholders like YOUR_WEB_CLIENT_ID_FROM_GOOGLE_SERVICES_JSON_OR_CLOUD_CONSOLE and https://your-backend-api.com/api.
