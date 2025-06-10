@@ -7,15 +7,8 @@ import { GoogleAuthProvider } from "firebase/auth";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyD-KFmkBJqL_jFJ6i-bXrR8tUY9yBPhBbQ",
-  authDomain: "scholar-chat-4mbxw.firebaseapp.com",
-  projectId: "scholar-chat-4mbxw",
-  storageBucket: "scholar-chat-4mbxw.firebasestorage.app",
-  messagingSenderId: "532399480743",
-  appId: "1:532399480743:web:7ca90688c550d490106082"
-};
 
+//todo: process.env
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
